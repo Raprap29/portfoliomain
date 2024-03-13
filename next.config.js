@@ -4,7 +4,7 @@ const nextConfig = {
     swcMinify: true,
     // unoptimized: true,
     env: {
-        NEXT_PUBLIC_API: 'http://localhost:8080/api',
+        NEXT_PUBLIC_API: 'https://portfolioapi-ankn.onrender.com/api',
     }
 }
 
