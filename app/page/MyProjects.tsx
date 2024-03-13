@@ -1,0 +1,376 @@
+"use client";
+
+import React, { useState, useEffect, useRef } from "react";
+import { Fredericka_the_Great, Notable } from "next/font/google";
+import { AnimatePresence, motion } from "framer-motion";
+import { Rum_Raisin } from "next/font/google";
+
+const Fredericka_the_Great_Font = Fredericka_the_Great({ subsets: ['latin'], weight: "400" });
+const Notable_Font = Notable({ subsets: ['latin'], weight: "400" });
+
+interface TypeProps {
+  name: string;
+  color: string;
+  textcolor: string;
+}
+
+interface MyProjectsProps {
+  isMobile: number;
+}
+
+interface ProjectProps {
+  image: string;
+  name: string;
+  type: TypeProps[];
+  description: string;
+}
+
+const Rum_RaisinFont  = Rum_Raisin ({ subsets: ['latin'], weight: "400" });
+
+const MyProjects: React.FC<MyProjectsProps> = ({ isMobile }) => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const textRef = useRef<HTMLParagraphElement>(null);
+
+  const [viewAll, setViewAll] = useState<number>(4);
+
+  const ZoomCard = {
+    offscreen: {
+      y: 400,
+      opacity: 0,
+    },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+    }
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const textElement = textRef.current;
+      if (!textElement) return;
+
+      const textWidth = textElement.scrollWidth;
+
+      setScrollPosition((prevPosition) => {
+        const newPosition = prevPosition + 1;
+        if (newPosition >= textWidth) {
+          return newPosition - textWidth;
+        } else {
+          return newPosition;
+        }
+      });
+
+    }, 10);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const ArrayForTheProject: ProjectProps[] = [
+    {
+      image: "2.png",
+      name: "Wisehunt System",
+      type: [
+        {
+          name: "NODE JS",
+          color: "#44883e",
+          textcolor: "#fff",
+        },
+        {
+          name: "NEXT JS",
+          color: "#fff",
+          textcolor: "#000"
+        },
+        {
+          name: "PC ONLY",
+          color: "#fff",
+          textcolor: "#000"
+        }
+      ],
+      description: "This system is to operate the products and optimize per product of what is the lowest qty, also to track the sales of the products.",
+    },
+    {
+      image: "1.png",
+      name: "Cake E-Commerce",
+      type: [
+        {
+          name: "NODE JS",
+          color: "#44883e",
+          textcolor: "#fff"
+        },
+        {
+          name: "REACT JS",
+          color: "#303F9F",
+          textcolor: "#fff"
+        },
+        {
+          name: "PC ONLY",
+          color: "#fff",
+          textcolor: "#000"
+        }
+      ],
+      description: "This e-commerce platform is for purchasing cake products or other items. I use MongoDB as the database, and for login security, I employ JWT authentication.",
+    },
+    {
+      image: "3.png",
+      name: "MÑZ SALES & INVENTORY",
+      type: [
+        {
+          name: "PHP",
+          color: "#484C89",
+          textcolor: "#fff"
+        },
+        {
+          name: "PC ONLY",
+          color: "#fff",
+          textcolor: "#000"
+        }
+      ],
+      description: "This inventory System Motor is using php and the database is MYSQL. This system is to manage the products of the motor, and manage. To organize and optize of the near out of stock of the products.",
+    },
+    {
+      image: "4.png",
+      name: "PRIME GAME SITE",
+      type: [
+        {
+          name: "NODE JS",
+          color: "#44883e",
+          textcolor: "#fff"
+        },
+        {
+          name: "REACT JS",
+          color: "#303F9F",
+          textcolor: "#fff"
+        },
+        {
+          name: "PC ONLY",
+          color: "#fff",
+          textcolor: "#000"
+        }
+      ],
+      description: "This game site is using node js and react js and the database is Mongodb.",
+    },
+    {
+      image: "5.png",
+      name: "QUOTES",
+      type: [
+        {
+          name: "NODE JS",
+          color: "#44883e",
+          textcolor: "#fff"
+        },
+        {
+          name: "EJS",
+          color: "#FFAE42",
+          textcolor: "#fff"
+        },
+        {
+          name: "NOT AVAILABLE",
+          color: "#fff",
+          textcolor: "#000"
+        }
+      ],
+      description: "This site is a quotes where you can list all your plan. It is using node js and ejs and the database is mongodb",
+    },
+    {
+      image: "6.png",
+      name: "NEVERSTOP",
+      type: [
+        {
+          name: "NODE JS",
+          color: "#44883e",
+          textcolor: "#fff"
+        },
+        {
+          name: "REACT JS",
+          color: "#303F9F",
+          textcolor: "#fff"
+        },
+        {
+          name: "PC ONLY",
+          color: "#fff",
+          textcolor: "#000"
+        }
+      ],
+      description: "This site is using node js and react js and the database is Mongodb.",
+    },
+    {
+      image: "7.png",
+      name: "LUXIRALOOM",
+      type: [
+        {
+          name: "NODE JS",
+          color: "#44883e",
+          textcolor: "#fff"
+        },
+        {
+          name: "REACT JS",
+          color: "#303F9F",
+          textcolor: "#fff"
+        },
+        {
+          name: "PC/MOBILE",
+          color: "#fff",
+          textcolor: "#000"
+        }
+      ],
+      description: "This site is using node js and react js and the database is Mongodb. This is a e-commerece where the products is more on fashion shirt.",
+    },
+    {
+      image: "8.png",
+      name: "PORTFOLIO",
+      type: [
+        {
+          name: "NODE JS",
+          color: "#44883e",
+          textcolor: "#fff"
+        },
+        {
+          name: "NEXT JS",
+          color: "#fff",
+          textcolor: "#000"
+        },
+        {
+          name: "SPRING BOOT",
+          color: "#44883e",
+          textcolor: "#fff"
+        },
+        {
+          name: "PC/MOBILE",
+          color: "#fff",
+          textcolor: "#000"
+        }
+      ],
+      description: "This is my portfolio site.",
+    },
+    {
+      image: "9.png",
+      name: "JAMA REALTY",
+      type: [
+        {
+          name: "NODE JS",
+          color: "#44883e",
+          textcolor: "#fff"
+        },
+        {
+          name: "NEXT JS",
+          color: "#fff",
+          textcolor: "#000"
+        },
+        {
+          name: "PC/MOBILE",
+          color: "#fff",
+          textcolor: "#000"
+        }
+      ],
+      description: "This site is a real state to sell the house to manage the house also.",
+    },
+    {
+      image: "10.png",
+      name: "SINCO SYSTEM ANDROID",
+      type: [
+        {
+          name: "KOTLIN",
+          color: "#E24462",
+          textcolor: "#fff"
+        },
+        {
+          name: "FIREBASE",
+          color: "#FFAE42",
+          textcolor: "#fff"
+        },
+        {
+          name: "APK",
+          color: "#fff",
+          textcolor: "#000"
+        }
+      ],
+      description: "This application is to manage the store of the liquor, also to make sure the stocks is nearly out of stocks to avoid hassle to the shop.",
+    },
+  ];
+
+  
+  const HandleViewAll = () => {
+    setViewAll(ArrayForTheProject?.length)
+  }
+
+  const HideViewAll = () => {
+    setViewAll(4);
+  }
+
+  return (
+    <>
+      <div className="w-full bg-[#ccc] flex items-center w-full h-[80px] overflow-hidden">
+        <div style={{ transform: `translateX(${-scrollPosition}px)` }}>
+          <p ref={textRef} className={`${Fredericka_the_Great_Font.className} text-[30px] font-bold text-[#000] whitespace-nowrap`}>
+            I am Ralph Matthew Maglaya a Developer my mission is to make
+            your website better, and especially of your business company. With a
+            blend of technical expertise and creative flair, I aim to optimize
+            user experience, technology functionality, and enhance visual
+            aesthetics. Let's collaborate to make your online presence shine
+            brighter!
+          </p>
+        </div>
+      </div>
+      <div className="bg-[#fff] w-full h-[3px]"></div>
+      <div className="mx-auto container max-w-[1100px] mt-5">
+        <div className="flex justify-center">
+          <div className="flex justify-center w-[400px] rounded-[10px] shadow-[0px_5px_10px_0px_rgba(255,255,255,.90)] bg-[#fff]">
+            <p className={`${Notable_Font.className} text-center text-[30px] md:text-[50px] pb-3 text-black font-bold`}>PROJECTS</p>
+          </div>
+        </div>
+          <div className="mx-auto container px-[20px] max-w-[1250px] mt-[5rem] gap-x-[70px] gap-y-[20px] grid-cols-1 grid md:grid-cols-2">
+            {ArrayForTheProject?.slice(0, viewAll).map((item: any, index: number) => (
+              <motion.div
+                initial="offscreen"
+                whileInView="onscreen"
+                key={`cardwork-${index}`}
+                viewport={{ once: true, amount: 0.0 }}
+              >
+                  <motion.div
+                  variants={ZoomCard}
+                  transition={{ duration: .75 }}
+                  whileHover={{
+                    scale: 1.05,
+                    translateY: -30,
+                  }}
+                  className={`group relative p-2 overflow-hidden border-solid transition-all duration-300 ease-in-out scale-100 hover:scale-105 hover:shadow-[0px_0px_10px_2px_rgba(255,255,255,0.75)] cursor-pointer border-[2px] border border-[#fff] w-full ${isMobile < 768 ? "" : index % 2 === 0 ? "mt-[6rem]" : ""}`}>
+                  <div className={`relative w-full h-[200px] bg-cover bg-center bg-no-repeat`} style={{ backgroundImage: `url('/imagework/${item?.image}')` }}>
+                    <div className="group-hover:opacity-100 opacity-0 transition duration-300 ease-in-out absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[rgba(0,0,0,.50)] flex justify-center items-center">
+                      <p className="font-bold text-22">VIEW DETAILS</p>
+                    </div>
+                  </div>
+                  <div className="flex p-4 mt-1 flex-col gap-y-[10px] h-full">
+                    <div>
+                      <p className={`font-bold text-[22px] ${Rum_RaisinFont.className}`}>{item?.name}</p>
+                    </div>
+                    <div className="rounded-[10px]">
+                      <p className="text-[16px]">{item?.description}</p>
+                    </div>
+                    <div className="flex items-center flex-wrap gap-y-[15px] mt-2 gap-x-[22px]">
+                      {item?.type?.map((item: any, index: number) => (
+                        <div key={`type-${index}`} style={{ backgroundColor: `${item?.color}` }} className={`shadow-3dshadow border border-solid border-1 border-[#ccc] p-2 rounded-[100px] px-[20px]`}>
+                          <p className={`${Rum_RaisinFont.className} font-bold`} style={{ color: `${item?.textcolor}` }}>{item?.name}</p>
+                        </div>
+                      ))}
+
+                    </div>
+                  </div>
+                </motion.div>
+              </motion.div>
+            ))}
+          </div>
+          {viewAll <= 4 ?
+          <div className="mt-10 flex justify-center">
+            <button type="button" onClick={HandleViewAll} className="shadow-[0px_6px_2px_3px_rgba(255,255,255,.75)] hover:bg-[#fff] hover:text-black transition-all duration-300 ease-in-out hover:shadow-[0px_0px_0px_0px_rgba(255,255,255,0)] px-[50px] py-[10px] shadow-3dshadow rounded-[10px] font-bold border border-solid border-[#fff] border-2">VIEW ALL</button>
+          </div>
+          : 
+          <div className="mt-10 flex justify-center">
+            <button type="button" onClick={HideViewAll} className="shadow-[0px_6px_2px_3px_rgba(255,255,255,.75)] hover:bg-[#fff] hover:text-black transition-all duration-300 ease-in-out hover:shadow-[0px_0px_0px_0px_rgba(255,255,255,0)] px-[50px] py-[10px] shadow-3dshadow rounded-[10px] font-bold border border-solid border-[#fff] border-2">HIDE</button>
+          </div>
+          }
+      </div>
+    </>
+  );
+};
+
+export default MyProjects;
