@@ -29,6 +29,8 @@ const ContactUs: React.FC = () => {
 
     const [lastSubmitTime, setLastSubmitTime] = useState<number | null>(null);
 
+    const [Loading, setLoading] = useState<boolean>(false);
+
     const AnimationCardMotion = {
         offscreen: {
             opacity: 0,
@@ -128,6 +130,7 @@ const ContactUs: React.FC = () => {
         e.preventDefault();
 
         try{
+            setLoading(true);
             const {
                 email,
                 name,
@@ -196,7 +199,7 @@ const ContactUs: React.FC = () => {
 
             }
       
-
+            setLoading(false);
         }catch(err)
         {
             return console.error(err);
@@ -275,7 +278,7 @@ const ContactUs: React.FC = () => {
                                 <textarea name="message" value={formSubmit.message} onChange={handleChangeSubmit} className="focus:border-[#088F8F] border-[5px] placeholder:italic w-full mt-3 py-[10px] px-[8px] text-black outline-none rounded-[5px] border-[black] border h-[100px] border-solid border-[3px] shadow-3dshadow" placeholder="Enter Message..."></textarea>
                             </div>
                             <div className="w-full px-[50px] pb-5 mt-4">
-                                <button type="button" onClick={handleSubmitEmail} className="bg-[#1F4329] py-3 border border-solid border-[3px] border-[#fff] text-white rounded-[5px] w-full shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] hover:bg-[#183520] duration-300 transistion ease-in-out font-bold">{"SEND"}</button>
+                                <button type="button" onClick={handleSubmitEmail} className={`${Loading ? "pointer-events-none" : ""} bg-[#1F4329] py-3 border border-solid border-[3px] border-[#fff] text-white rounded-[5px] w-full shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] hover:bg-[#183520] duration-300 transistion ease-in-out font-bold`}>{Loading ? "Loading..." : "SEND"}</button>
                             </div>
                         </div>
                     </motion.div>
