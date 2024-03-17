@@ -57,10 +57,10 @@ const ShowContextDetails: React.FC<ShowContextProps> = ({ ImageWork, ToggleShow,
                             duration: 1.25,
                             ease: "backInOut",
                         }}
-                        className="fixed z-[200] top-[20%] left-[20%] transform translate-y-[-50%] translate-x-[-50%]">
-                            <div className="flex max-[768px]:flex-col p-[15px] rounded-[5px] gap-x-[20px] w-[200px] md:w-[900px] h-[400px] bg-[#000] border border-solid border-[#fff] border-2 shadow-3dshadow">
+                        className="fixed z-[200] top-[20%] left-[13%] transform translate-y-[-50%] translate-x-[-50%]">
+                            <div className="flex max-[768px]:flex-col p-[15px] rounded-[5px] gap-x-[20px] max-[420px]:w-[250px] max-[768px]:w-[350px] md:w-[900px] md:h-[400px] bg-[#000] border border-solid border-[#fff] border-2 shadow-3dshadow">
                                 <div className="absolute right-[20px]">
-                                    <button onClick={handleClose} type="button" className="bg-[red] text-white rounded-[5px] p-2"><FaTimes  /></button>
+                                    <button onClick={handleClose} type="button" className="max-[768px]:hidden bg-[red] text-white rounded-[5px] p-2"><FaTimes  /></button>
                                 </div>
                                 <Swiper
                                     slidesPerView={1}
@@ -88,10 +88,13 @@ const ShowContextDetails: React.FC<ShowContextProps> = ({ ImageWork, ToggleShow,
                                 </Swiper>
                                 <div className="text-white md:w-[600px] mt-1">
                                     <div>
-                                        <p className="text-[22px] font-bold">{ImageWork?.name}</p>
+                                        <p className="text-[22px] font-bold max-[768px]:mt-4">{ImageWork?.name}</p>
                                     </div>
                                     <div className="text-justify w-full mt-5">
                                         <p>{ImageWork?.description}</p>
+                                    </div>
+                                    <div className="mt-4 max-[768px]:block hidden">
+                                        <button type="button" onClick={handleClose} className="bg-[red] text-white w-full py-[10px] rounded-[5px] shadow-3dshadow hover:bg-[rgba(255,0,0,.75)] transition duration-300 ease-in-out">CLOSE</button>
                                     </div>
                                 </div>
                             </div>
