@@ -13,6 +13,7 @@ import MyProjects from "./page/MyProjects";
 import ContactUs from "./page/ContactUs";
 import Footer from "./components/Footer";
 import Certificate from "./page/Certificate";
+import ShowContextDetails from "./components/ShowContextProject";
 
 const Main = () => {
 
@@ -34,6 +35,7 @@ const Main = () => {
   return (
     <React.Fragment>
       <ParallaxProvider>
+
           <div className="fixed top-0 w-full z-[99]">
             <Navbar />
           </div>

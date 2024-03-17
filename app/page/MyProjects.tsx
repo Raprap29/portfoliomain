@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { Fredericka_the_Great, Notable } from "next/font/google";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, Variants } from "framer-motion"
 import { Rum_Raisin } from "next/font/google";
+import ShowContextDetails from "../components/ShowContextProject";
 
 const Fredericka_the_Great_Font = Fredericka_the_Great({ subsets: ['latin'], weight: "400" });
 const Notable_Font = Notable({ subsets: ['latin'], weight: "400" });
@@ -12,6 +13,9 @@ interface TypeProps {
   name: string;
   color: string;
   textcolor: string;
+}
+interface imgShow {
+  img: string;
 }
 
 interface MyProjectsProps {
@@ -22,7 +26,18 @@ interface ProjectProps {
   image: string;
   name: string;
   type: TypeProps[];
+  imgShow: imgShow[];
   description: string;
+}
+
+interface ImagePropsDetails {
+  name: string;
+  description: string;
+  image: ImageDetailsView[];
+}
+
+interface ImageDetailsView {
+  img: string;
 }
 
 const Rum_RaisinFont  = Rum_Raisin ({ subsets: ['latin'], weight: "400" });
@@ -30,6 +45,18 @@ const Rum_RaisinFont  = Rum_Raisin ({ subsets: ['latin'], weight: "400" });
 const MyProjects: React.FC<MyProjectsProps> = ({ isMobile }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const textRef = useRef<HTMLParagraphElement>(null);
+
+  const [detailsShow, setDetailsSHow] = useState<ImagePropsDetails>({
+    name: "",
+    description: "",
+    image: [{
+      img: "",
+    }]
+  })
+
+  const [showDetails, setshowDetails] = useState<boolean>(false);
+
+  const [nameImage, setNameImage] = useState<string>("");
 
   const [viewAll, setViewAll] = useState<number>(4);
 
@@ -44,27 +71,15 @@ const MyProjects: React.FC<MyProjectsProps> = ({ isMobile }) => {
     }
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const textElement = textRef.current;
-      if (!textElement) return;
+  
+  const HandleClickShow = (Filter: string) => {
+    setNameImage(Filter);
+    setshowDetails(true);
+    
+  }
 
-      const textWidth = textElement.scrollWidth;
-
-      setScrollPosition((prevPosition) => {
-        const newPosition = prevPosition + 1;
-        if (newPosition >= textWidth) {
-          return newPosition - textWidth;
-        } else {
-          return newPosition;
-        }
-      });
-
-    }, 10);
-
-    return () => clearInterval(interval);
-  }, []);
-
+ 
+  
   const ArrayForTheProject: ProjectProps[] = [
     {
       image: "2.png",
@@ -85,6 +100,24 @@ const MyProjects: React.FC<MyProjectsProps> = ({ isMobile }) => {
           color: "#fff",
           textcolor: "#000"
         }
+      ],
+      imgShow: 
+      [
+        {
+          img: "Wisehunt/1"
+        },
+        {
+          img: "Wisehunt/2"
+        },
+        {
+          img: "Wisehunt/3"
+        },
+        {
+          img: "Wisehunt/4"
+        },
+        {
+          img: "Wisehunt/5"
+        },
       ],
       description: "This system is to operate the products and optimize per product of what is the lowest qty, also to track the sales of the products.",
     },
@@ -108,6 +141,15 @@ const MyProjects: React.FC<MyProjectsProps> = ({ isMobile }) => {
           textcolor: "#000"
         }
       ],
+      imgShow: 
+      [
+        {
+          img: "Cake/1"
+        },
+        {
+          img: "Cake/2"
+        },
+      ],
       description: "This e-commerce platform is for purchasing cake products or other items. I use MongoDB as the database, and for login security, I employ JWT authentication.",
     },
     {
@@ -124,6 +166,21 @@ const MyProjects: React.FC<MyProjectsProps> = ({ isMobile }) => {
           color: "#fff",
           textcolor: "#000"
         }
+      ],
+      imgShow: 
+      [
+        {
+          img: "mnz/1"
+        },
+        {
+          img: "mnz/2"
+        },
+        {
+          img: "mnz/3"
+        },
+        {
+          img: "mnz/4"
+        },
       ],
       description: "This inventory System Motor is using php and the database is MYSQL. This system is to manage the products of the motor, and manage. To organize and optize of the near out of stock of the products.",
     },
@@ -147,6 +204,21 @@ const MyProjects: React.FC<MyProjectsProps> = ({ isMobile }) => {
           textcolor: "#000"
         }
       ],
+      imgShow: 
+      [
+        {
+          img: "Prime/1"
+        },
+        {
+          img: "Prime/2"
+        },
+        {
+          img: "Prime/3"
+        },
+        {
+          img: "Prime/4"
+        },
+      ],
       description: "This game site is using node js and react js and the database is Mongodb.",
     },
     {
@@ -168,6 +240,21 @@ const MyProjects: React.FC<MyProjectsProps> = ({ isMobile }) => {
           color: "#fff",
           textcolor: "#000"
         }
+      ],
+      imgShow: 
+      [
+        {
+          img: "Quotes/1"
+        },
+        {
+          img: "Quotes/2"
+        },
+        {
+          img: "Quotes/3"
+        },
+        {
+          img: "Quotes/4"
+        },
       ],
       description: "This site is a quotes where you can list all your plan. It is using node js and ejs and the database is mongodb",
     },
@@ -191,6 +278,18 @@ const MyProjects: React.FC<MyProjectsProps> = ({ isMobile }) => {
           textcolor: "#000"
         }
       ],
+      imgShow: 
+      [
+        {
+          img: "NonStop/1"
+        },
+        {
+          img: "NonStop/2"
+        },
+        {
+          img: "NonStop/3"
+        }
+      ],
       description: "This site is using node js and react js and the database is Mongodb.",
     },
     {
@@ -212,6 +311,24 @@ const MyProjects: React.FC<MyProjectsProps> = ({ isMobile }) => {
           color: "#fff",
           textcolor: "#000"
         }
+      ],
+      imgShow: 
+      [
+        {
+          img: "LuxuriaLoom/1"
+        },
+        {
+          img: "LuxuriaLoom/2"
+        },
+        {
+          img: "LuxuriaLoom/3"
+        },
+        {
+          img: "LuxuriaLoom/4"
+        },
+        {
+          img: "LuxuriaLoom/5"
+        },
       ],
       description: "This site is using node js and react js and the database is Mongodb. This is a e-commerece where the products is more on fashion shirt.",
     },
@@ -240,6 +357,15 @@ const MyProjects: React.FC<MyProjectsProps> = ({ isMobile }) => {
           textcolor: "#000"
         }
       ],
+      imgShow: 
+      [
+        {
+          img: "portfolio/1"
+        },
+        {
+          img: "portfolio/2"
+        }
+      ],
       description: "This is my portfolio site.",
     },
     {
@@ -261,6 +387,27 @@ const MyProjects: React.FC<MyProjectsProps> = ({ isMobile }) => {
           color: "#fff",
           textcolor: "#000"
         }
+      ],
+      imgShow: 
+      [
+        {
+          img: "RealEstate/1"
+        },
+        {
+          img: "RealEstate/2"
+        },
+        {
+          img: "RealEstate/3"
+        },
+        {
+          img: "RealEstate/4"
+        },
+        {
+          img: "RealEstate/5"
+        },
+        {
+          img: "RealEstate/6"
+        },
       ],
       description: "This site is a real state to sell the house to manage the house also.",
     },
@@ -284,21 +431,80 @@ const MyProjects: React.FC<MyProjectsProps> = ({ isMobile }) => {
           textcolor: "#000"
         }
       ],
+      imgShow: 
+      [
+        {
+          img: "Sinko/1",
+        },
+      ],
       description: "This application is to manage the store of the liquor, also to make sure the stocks is nearly out of stocks to avoid hassle to the shop.",
     },
   ];
-
+  
   
   const HandleViewAll = () => {
     setViewAll(ArrayForTheProject?.length)
   }
+  
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const textElement = textRef.current;
+      if (!textElement) return;
+
+      const textWidth = textElement.scrollWidth;
+
+      setScrollPosition((prevPosition) => {
+        const newPosition = prevPosition + 1;
+        if (newPosition >= textWidth) {
+          return newPosition - textWidth;
+        } else {
+          return newPosition;
+        }
+      });
+
+    }, 10);
+
+    return () => clearInterval(interval);
+  }, []);
+  
   const HideViewAll = () => {
     setViewAll(4);
   }
 
+  useEffect(() => {
+    const filteredImage = ArrayForTheProject?.find((item: any) => item?.name === nameImage);
+     
+    if(showDetails){
+      if (filteredImage) {
+          // If a matching item is found, update the state
+          setDetailsSHow({
+            name: filteredImage.name,
+            description: filteredImage.description,
+            image: filteredImage?.imgShow?.map((item: any) => ({
+              img: item?.img,
+            })) || [],
+          });
+        } else {
+          // If no matching item is found, reset the state
+          setDetailsSHow({
+            name: "",
+            description: "",
+            image: [],
+          });
+        }
+    }else{
+      setDetailsSHow({
+        name: "",
+        description: "",
+        image: [],
+      });
+    }
+  },[ArrayForTheProject, nameImage])
+  
   return (
-    <>
+    <> 
+      <ShowContextDetails ImageWork={detailsShow} ToggleShow={showDetails} setToggleShow={setshowDetails} />
       <div className="w-full bg-[#ccc] flex items-center w-full h-[80px] overflow-hidden">
         <div style={{ transform: `translateX(${-scrollPosition}px)` }}>
           <p ref={textRef} className={`${Fredericka_the_Great_Font.className} text-[30px] font-bold text-[#000] whitespace-nowrap`}>
@@ -328,11 +534,13 @@ const MyProjects: React.FC<MyProjectsProps> = ({ isMobile }) => {
               >
                   <motion.div
                   variants={ZoomCard}
-                  transition={{ duration: .75 }}
+                  transition={{ duration: .25 }}
                   whileHover={{
                     scale: 1.05,
                     translateY: -30,
                   }}
+
+                  onClick={() => HandleClickShow(item?.name)}
                   className={`group relative p-2 overflow-hidden border-solid transition-all duration-300 ease-in-out scale-100 hover:scale-105 hover:shadow-[0px_0px_10px_2px_rgba(255,255,255,0.75)] cursor-pointer border-[2px] border border-[#fff] w-full ${isMobile < 768 ? "" : index % 2 === 0 ? "mt-[6rem]" : ""}`}>
                   <div className={`relative w-full h-[200px] bg-cover bg-center bg-no-repeat`} style={{ backgroundImage: `url('/imagework/${item?.image}')` }}>
                     <div className="group-hover:opacity-100 opacity-0 transition duration-300 ease-in-out absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[rgba(0,0,0,.50)] flex justify-center items-center">
