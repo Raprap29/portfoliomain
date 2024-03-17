@@ -58,7 +58,7 @@ const ShowContextDetails: React.FC<ShowContextProps> = ({ ImageWork, ToggleShow,
                             ease: "backInOut",
                         }}
                         className="fixed z-[200] top-[20%] left-[20%] transform translate-y-[-50%] translate-x-[-50%]">
-                            <div className="flex p-[15px] rounded-[5px] gap-x-[20px] w-[900px] h-[400px] bg-[#000] border border-solid border-[#fff] border-2 shadow-3dshadow">
+                            <div className="flex max-[768px]:flex-col p-[15px] rounded-[5px] gap-x-[20px] w-[200px] md:w-[900px] h-[400px] bg-[#000] border border-solid border-[#fff] border-2 shadow-3dshadow">
                                 <div className="absolute right-[20px]">
                                     <button onClick={handleClose} type="button" className="bg-[red] text-white rounded-[5px] p-2"><FaTimes  /></button>
                                 </div>
@@ -82,15 +82,15 @@ const ShowContextDetails: React.FC<ShowContextProps> = ({ ImageWork, ToggleShow,
                                 >
                                     {ImageWork?.image?.map((item: any, index: number) => (
                                         <SwiperSlide key={index} className="h-full w-full">
-                                            <img alt={`image-${index}`} className="w-full h-[200px] md:h-full" src={`/imagework/${item?.img}.png`} />
+                                            <img alt={`image-${index}`} className="h-[200px] md:h-full" src={`/imagework/${item?.img}.png`} />
                                         </SwiperSlide>
                                     ))}
                                 </Swiper>
-                                <div className="text-white w-[600px] mt-1">
+                                <div className="text-white md:w-[600px] mt-1">
                                     <div>
                                         <p className="text-[22px] font-bold">{ImageWork?.name}</p>
                                     </div>
-                                    <div className="text-justify mt-5">
+                                    <div className="text-justify w-full mt-5">
                                         <p>{ImageWork?.description}</p>
                                     </div>
                                 </div>

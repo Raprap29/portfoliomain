@@ -46,7 +46,7 @@ const MyProjects: React.FC<MyProjectsProps> = ({ isMobile }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const textRef = useRef<HTMLParagraphElement>(null);
 
-  const [detailsShow, setDetailsSHow] = useState<ImagePropsDetails>({
+  const [detailsShow, setDetailsShow] = useState<ImagePropsDetails>({
     name: "",
     description: "",
     image: [{
@@ -75,10 +75,8 @@ const MyProjects: React.FC<MyProjectsProps> = ({ isMobile }) => {
   const HandleClickShow = (Filter: string) => {
     setNameImage(Filter);
     setshowDetails(true);
-    
   }
 
- 
   
   const ArrayForTheProject: ProjectProps[] = [
     {
@@ -436,15 +434,20 @@ const MyProjects: React.FC<MyProjectsProps> = ({ isMobile }) => {
         {
           img: "Sinko/1",
         },
+        {
+          img: "Sinko/2",
+        },
+        {
+          img: "Sinko/3",
+        },
+        {
+          img: "Sinko/4",
+        },
+       
       ],
       description: "This application is to manage the store of the liquor, also to make sure the stocks is nearly out of stocks to avoid hassle to the shop.",
     },
   ];
-  
-  
-  const HandleViewAll = () => {
-    setViewAll(ArrayForTheProject?.length)
-  }
   
 
   useEffect(() => {
@@ -464,44 +467,34 @@ const MyProjects: React.FC<MyProjectsProps> = ({ isMobile }) => {
       });
 
     }, 10);
-
+    
     return () => clearInterval(interval);
-  }, []);
+  }, [textRef]);
   
   const HideViewAll = () => {
     setViewAll(4);
   }
 
+  const HandleViewAll = () => {
+    setViewAll(ArrayForTheProject?.length)
+  }
+
   useEffect(() => {
-    const filteredImage = ArrayForTheProject?.find((item: any) => item?.name === nameImage);
-     
-    if(showDetails){
-      if (filteredImage) {
-          // If a matching item is found, update the state
-          setDetailsSHow({
-            name: filteredImage.name,
-            description: filteredImage.description,
-            image: filteredImage?.imgShow?.map((item: any) => ({
-              img: item?.img,
-            })) || [],
-          });
-        } else {
-          // If no matching item is found, reset the state
-          setDetailsSHow({
-            name: "",
-            description: "",
-            image: [],
-          });
-        }
-    }else{
-      setDetailsSHow({
-        name: "",
-        description: "",
-        image: [],
+    const filteredImage = ArrayForTheProject.find(
+      (item) => item?.name === nameImage
+    );
+
+    if (filteredImage) {
+      setDetailsShow({
+        name: filteredImage.name,
+        description: filteredImage.description,
+        image: filteredImage.imgShow?.map((item) => ({
+          img: item?.img,
+        })) || [],
       });
     }
-  },[ArrayForTheProject, nameImage])
-  
+  }, [nameImage]);
+
   return (
     <> 
       <ShowContextDetails ImageWork={detailsShow} ToggleShow={showDetails} setToggleShow={setshowDetails} />
