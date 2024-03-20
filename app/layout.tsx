@@ -23,9 +23,9 @@ export const metadata: Metadata = {
       type: 'image/x-icon',
     },
     {
-      sizes: "16x16",
       url: '/favicons/favicon-16x16.png',
       type: 'image/png',
+      sizes: "16x16",
     },
     {
       rel: 'apple-touch-icon',
