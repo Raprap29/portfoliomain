@@ -32,6 +32,7 @@ import { FaDocker } from "react-icons/fa";
 import { IoLogoFigma } from "react-icons/io5";
 import { IoLogoGithub } from "react-icons/io";
 import { FaGitAlt } from "react-icons/fa";
+import { GrGraphQl } from "react-icons/gr";
 
 const Luckiest_GuyFont = Luckiest_Guy({subsets: ['latin'], weight: "400"})
 
@@ -107,6 +108,7 @@ const Tools: React.FC = () => {
         SiMysql,
         IoLogoFirebase,
         SiMongodb,
+        GrGraphQl,
     ];
     
     const mobileBaseIcons = [

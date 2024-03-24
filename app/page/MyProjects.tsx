@@ -447,6 +447,111 @@ const MyProjects: React.FC<MyProjectsProps> = ({ isMobile }) => {
       ],
       description: "This application is to manage the store of the liquor, also to make sure the stocks is nearly out of stocks to avoid hassle to the shop.",
     },
+    {
+      image: "11.png",
+      name: "INTERIOR WEBSITE",
+      type: [
+        {
+          name: "NODE JS",
+          color: "#44883e",
+          textcolor: "#fff"
+        },
+        {
+          name: "REACT JS",
+          color: "#303F9F",
+          textcolor: "#fff"
+        },
+        {
+          name: "PC/MOBILE",
+          color: "#fff",
+          textcolor: "#000"
+        }
+      ],
+      imgShow: 
+      [
+        {
+          img: "LuxCraftInterior/1",
+        },
+        {
+          img: "LuxCraftInterior/2",
+        },
+        {
+          img: "LuxCraftInterior/3",
+        },
+        {
+          img: "LuxCraftInterior/4",
+        },
+        {
+          img: "LuxCraftInterior/5",
+        },
+        {
+          img: "LuxCraftInterior/6",
+        },
+        {
+          img: "LuxCraftInterior/7",
+        },
+        {
+          img: "LuxCraftInterior/8",
+        },
+       
+      ],
+      description: "This website is a collaboration with the front-end developer; I fix the other CSS and add additional features like login. Additionally, I develop the backend, utilizing GraphQL for querying the database.",
+    },
+    {
+      image: "12.png",
+      name: "CLOTHING E-COMMERCE",
+      type: [
+        {
+          name: "HTML",
+          color: "#ffa500",
+          textcolor: "#fff"
+        },
+        {
+          name: "CSS",
+          color: "#0000ff",
+          textcolor: "#fff"
+        },
+        {
+          name: "JAVASCRIPT",
+          color: "#ffff00",
+          textcolor: "#fff"
+        },
+        {
+          name: "PC",
+          color: "#fff",
+          textcolor: "#000"
+        }
+      ],
+      imgShow: 
+      [
+        {
+          img: "Clothing/1",
+        },
+        {
+          img: "Clothing/2",
+        },
+        {
+          img: "Clothing/3",
+        },
+        {
+          img: "Clothing/4",
+        },
+        {
+          img: "Clothing/5",
+        },
+        {
+          img: "Clothing/6",
+        },
+        {
+          img: "Clothing/7",
+        },
+        {
+          img: "Clothing/8",
+        },
+       
+      ],
+      description: "This website is a project of the students of website about e-commerce for designing also about products using html, css, and javascript.",
+    },
   ];
   
 
