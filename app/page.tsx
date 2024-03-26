@@ -14,6 +14,7 @@ import ContactUs from "./page/ContactUs";
 import Footer from "./components/Footer";
 import Certificate from "./page/Certificate";
 import ShowContextDetails from "./components/ShowContextProject";
+import { Debugger } from "./components/debugger";
 
 const Main = () => {
 
@@ -31,6 +32,8 @@ const Main = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  Debugger();
 
   return (
     <React.Fragment>
