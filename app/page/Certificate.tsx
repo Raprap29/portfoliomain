@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperType } from "swiper";
 import { Goblin_One } from "next/font/google";
 import 'swiper/css';
-// import 'swiper/css/navigation';
 const Goblin_One_Font = Goblin_One({subsets: ['latin'], weight: "400"})
 import { Autoplay } from 'swiper/modules';
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
