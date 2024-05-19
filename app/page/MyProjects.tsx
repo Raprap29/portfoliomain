@@ -151,38 +151,6 @@ const MyProjects: React.FC<MyProjectsProps> = ({ isMobile }) => {
       description: "This e-commerce platform is for purchasing cake products or other items. I use MongoDB as the database, and for login security, I employ JWT authentication.",
     },
     {
-      image: "3.png",
-      name: "MÑZ SALES & INVENTORY",
-      type: [
-        {
-          name: "PHP",
-          color: "#484C89",
-          textcolor: "#fff"
-        },
-        {
-          name: "PC ONLY",
-          color: "#fff",
-          textcolor: "#000"
-        }
-      ],
-      imgShow: 
-      [
-        {
-          img: "mnz/1"
-        },
-        {
-          img: "mnz/2"
-        },
-        {
-          img: "mnz/3"
-        },
-        {
-          img: "mnz/4"
-        },
-      ],
-      description: "This inventory System Motor is using php and the database is MYSQL. This system is to manage the products of the motor, and manage. To organize and optize of the near out of stock of the products.",
-    },
-    {
       image: "4.png",
       name: "PRIME GAME SITE",
       type: [
@@ -331,42 +299,6 @@ const MyProjects: React.FC<MyProjectsProps> = ({ isMobile }) => {
       description: "This site is using node js and react js and the database is Mongodb. This is a e-commerece where the products is more on fashion shirt.",
     },
     {
-      image: "8.png",
-      name: "PORTFOLIO",
-      type: [
-        {
-          name: "NODE JS",
-          color: "#44883e",
-          textcolor: "#fff"
-        },
-        {
-          name: "NEXT JS",
-          color: "#fff",
-          textcolor: "#000"
-        },
-        {
-          name: "SPRING BOOT",
-          color: "#44883e",
-          textcolor: "#fff"
-        },
-        {
-          name: "PC/MOBILE",
-          color: "#fff",
-          textcolor: "#000"
-        }
-      ],
-      imgShow: 
-      [
-        {
-          img: "portfolio/1"
-        },
-        {
-          img: "portfolio/2"
-        }
-      ],
-      description: "This is my portfolio site.",
-    },
-    {
       image: "9.png",
       name: "JAMA REALTY",
       type: [
@@ -408,44 +340,6 @@ const MyProjects: React.FC<MyProjectsProps> = ({ isMobile }) => {
         },
       ],
       description: "This site is a real state to sell the house to manage the house also.",
-    },
-    {
-      image: "10.png",
-      name: "SINCO SYSTEM ANDROID",
-      type: [
-        {
-          name: "KOTLIN",
-          color: "#E24462",
-          textcolor: "#fff"
-        },
-        {
-          name: "FIREBASE",
-          color: "#FFAE42",
-          textcolor: "#fff"
-        },
-        {
-          name: "APK",
-          color: "#fff",
-          textcolor: "#000"
-        }
-      ],
-      imgShow: 
-      [
-        {
-          img: "Sinko/1",
-        },
-        {
-          img: "Sinko/2",
-        },
-        {
-          img: "Sinko/3",
-        },
-        {
-          img: "Sinko/4",
-        },
-       
-      ],
-      description: "This application is to manage the store of the liquor, also to make sure the stocks is nearly out of stocks to avoid hassle to the shop.",
     },
     {
       image: "11.png",
