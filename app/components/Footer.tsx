@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
                             </Link>
                         ))}
                     </div>
-                    <p className="font-bold text-white max-[520px]:text-[12px]">© {new Date().getFullYear()}, made with ❤️ by Maglaya Ralph, using Next js, Tailwind CSS, and Spring Boot</p>
+                    <p className="font-bold text-white max-[520px]:text-[12px]">© {new Date().getFullYear()}, made with by Maglaya Ralph</p>
                 </div>
             </div>
         </>

@@ -95,11 +95,11 @@ const About = () => {
                     viewport={{ once: true, amount: 0.4 }} className="items-center grid grid-cols-2 max-[768px]:grid-cols-1 justify-center mt-7 gap-x-[50px]">
                         <motion.div variants={cardVariants}>
                             <p className="text-justify leading-10 text-[18px] max-[768px]:px-[20px] mb-5">
-                                Hi, I am 22 years, from Sta. Mesa Manila. My interest is to play guitar, hiking, and playing video games, I am studying at Polytechnic Univeristy of the Philippines taking up Bachelor of Science in Information Technology, my mission is to make your website better, and especially of your business company.
+                                Hi, I am 22 years, from Sta. Mesa Manila. My interest is to play guitar, hiking, and playing video games, I am studying at Polytechnic Univeristy of the Philippines taking up Bachelor of Science in Information Technology, my mission is to make the website better.
                             </p>
                             <p></p>
                             <p className="text-justify leading-10 text-[18px] max-[768px]:px-[20px] mb-5"> 
-                                With a blend of technical expertise and creative flair, I aim to optimize user experience, technology functionality, and enhance visual aesthetics. Let's collaborate to make your online presence shine brighter!
+                                With a blend of technical expertise and creative flair, I aim to optimize user experience, technology functionality, and enhance visual aesthetics.
                             </p>
                         </motion.div>
                         <motion.div 

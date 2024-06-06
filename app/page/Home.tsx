@@ -50,11 +50,7 @@ const Home: React.FC = () => {
         {
           name: "github",
           link: "https://github.com/Raprap29"
-        },
-        {
-          name: "instagram",
-          link: "https://www.instagram.com/matthewkahdjdh"
-        },
+        }
       ]
     
       const cardVariants: Variants = {

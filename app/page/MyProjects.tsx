@@ -392,6 +392,39 @@ const MyProjects: React.FC<MyProjectsProps> = ({ isMobile }) => {
       description: "This website is a collaboration with the front-end developer; I fix the other CSS and add additional features like login. Additionally, I develop the backend, utilizing GraphQL for querying the database.",
     },
     {
+      image: "3.png",
+      name: "Inventory MNZ Management",
+      type: [
+        {
+          name: "PHP",
+          color: "#A020F0",
+          textcolor: "#fff"
+        },
+        {
+          name: "PC",
+          color: "#fff",
+          textcolor: "#000"
+        }
+      ],
+      imgShow: 
+      [
+        {
+          img: "mnz/1",
+        },
+        {
+          img: "mnz/2",
+        },
+        {
+          img: "mnz/3",
+        },
+        {
+          img: "mnz/4",
+        }
+       
+      ],
+      description: "This website is to manage the inventory of the motor products.",
+    },
+    {
       image: "12.png",
       name: "CLOTHING E-COMMERCE",
       type: [
@@ -497,7 +530,7 @@ const MyProjects: React.FC<MyProjectsProps> = ({ isMobile }) => {
   return (
     <> 
       <ShowContextDetails ImageWork={detailsShow} ToggleShow={showDetails} setToggleShow={setshowDetails} />
-      <div className="w-full bg-[#ccc] flex items-center w-full h-[80px] overflow-hidden">
+      {/* <div className="w-full bg-[#ccc] flex items-center w-full h-[80px] overflow-hidden">
         <div style={{ transform: `translateX(${-scrollPosition}px)` }}>
           <p ref={textRef} className={`${Fredericka_the_Great_Font.className} text-[30px] font-bold text-[#000] whitespace-nowrap`}>
             I am Ralph Matthew Maglaya a Developer my mission is to make
@@ -508,7 +541,7 @@ const MyProjects: React.FC<MyProjectsProps> = ({ isMobile }) => {
             brighter!
           </p>
         </div>
-      </div>
+      </div> */}
       <div className="bg-[#fff] w-full h-[3px]"></div>
       <div className="mx-auto container max-w-[1100px] mt-5">
         <div className="flex justify-center">

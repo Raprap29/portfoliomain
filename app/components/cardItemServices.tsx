@@ -38,7 +38,7 @@ const CartItemServices: React.FC<CartItemServicesProps> = ({delay, image, TitleS
                 duration: 2,
                 delay: delay,
             }}
-            className="text-white border border-solid border-1 shadow-3dshadow text-black max-[768px]:h-full h-[400px] rounded-[5px] p-3">
+            className="bg-[#FFFAFA] border border-solid border-[3px] shadow-3dshadow text-black max-[768px]:h-full h-[400px] rounded-[5px] p-3">
                 <div className="flex justify-center">
                     <div className="text-[50px]">{image && React.createElement(image)}</div>
                 </div>
@@ -47,12 +47,6 @@ const CartItemServices: React.FC<CartItemServicesProps> = ({delay, image, TitleS
                 </div>
                 <div className="mt-4">
                     <p>{description}</p>
-                </div>
-                <div className="mt-5 flex justify-center">
-                    <Link className="group w-[140px] border border-solid border-1 border-[#ccc] p-2 rounded-[5px]" href="#contact">
-                        <p>Contact me</p>
-                        <div className="bg-[#fff] transition-all duration-300 ease-in-out w-[0px] group-hover:w-full h-[2px]"></div>
-                    </Link>
                 </div>
         </motion.div>
        </motion.div>

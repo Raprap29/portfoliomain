@@ -89,12 +89,12 @@ const Navbar = () => {
                                         <Link scroll={true} href="#about" className="border-black text-black transition-all duration-300 ease-in-out inline-flex items-center px-1 pt-1 text-sm font-medium hover:border-b-2 transition-opacity duration-300 ease-in-out hover:opacity-50">
                                             <p className="font-bold">About Me</p>
                                         </Link>
-                                        <Link scroll={true} href="#services" className="border-black text-black transition-all duration-300 ease-in-out inline-flex items-center px-1 pt-1 text-sm font-medium hover:border-b-2 transition-opacity duration-300 ease-in-out hover:opacity-50">
+                                        {/* <Link scroll={true} href="#services" className="border-black text-black transition-all duration-300 ease-in-out inline-flex items-center px-1 pt-1 text-sm font-medium hover:border-b-2 transition-opacity duration-300 ease-in-out hover:opacity-50">
                                             <p className="font-bold">Services</p>
                                         </Link>
                                         <Link scroll={true} href="#edu" className="border-black text-black transition-all duration-300 ease-in-out inline-flex items-center px-1 pt-1 text-sm font-medium hover:border-b-2 transition-opacity duration-300 ease-in-out hover:opacity-50">
                                             <p className="font-bold">Educational Background</p>
-                                        </Link>
+                                        </Link> */}
                                         <Link scroll={true} href="#tools" className="border-black text-black transition-all duration-300 ease-in-out inline-flex items-center px-1 pt-1 text-sm font-medium hover:border-b-2 transition-opacity duration-300 ease-in-out hover:opacity-50">
                                         <p className="font-bold">My Tools</p>
                                         </Link>

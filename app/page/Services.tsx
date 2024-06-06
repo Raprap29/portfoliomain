@@ -55,7 +55,7 @@ const Services: React.FC<ServicesProps> = ({isMobile}) => {
                             duration: 1,
                         }}
                         className="bg-cover bg-center h-[1580px] lg:h-[600px] shadow-[inset_0px_0px_30px_30px_rgba(0,0,0,1)] relative" style={{backgroundImage: "url('/image/3394.jpg')"}}></motion.div>
-                            <div className="absolute inset-0 bg-black opacity-60"></div>
+                            <div className="absolute inset-0 bg-black opacity-80"></div>
                             <div className="absolute inset-0  mx-[30px] flex items-center justify-center text-center">
                                 <div className="text-center top-[45px] absolute"><p className="text-[32px] text-white font-bold mb-4">MY SERVICES</p></div>
                                 <div className="container mt-5 gap-x-[40px] gap-y-[40px] grid grid-cols-1 md:grid-cols-3 mx-auto max-w-[1100px] text-white">

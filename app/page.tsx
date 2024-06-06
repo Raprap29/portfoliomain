@@ -48,12 +48,12 @@ const Main = () => {
           <div id="about">
             <About />
           </div>
-          <div id="services">
+          {/* <div id="services">
             <Services isMobile={isMobile} />
-          </div>
-          <div id="edu" className="pb-[100px]">
+          </div> */}
+          {/* <div id="edu" className="pb-[100px]">
             <BackgroundEdu isMobile={isMobile} />
-          </div>
+          </div> */}
           <div id="tools">
             <Tools />
           </div>
