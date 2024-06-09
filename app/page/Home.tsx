@@ -135,7 +135,6 @@ const Home: React.FC = () => {
                         strings: [
                           "I am a Web Developer",
                           "I am an Android Developer",
-                          "I am a Technical Support",
                         ],
                         autoStart: true,
                         loop: true,
