@@ -141,7 +141,7 @@ const Home: React.FC = () => {
                       }}
                     />
                   </div>
-                  <p className="text-white text-justify mt-3">Hi, I'm Ralph Maglaya, a developer with a passion for creating transformative digital experiences. I bring a comprehensive skill set to every project. I thrive on delivering technical support and innovative solutions that exceed expectations.</p>
+                  <p className="text-white text-justify mt-3">Hi, I'm Ralph Maglaya, a developer with a passion for creating transformative digital experiences. I bring a comprehensive skill set to every project.</p>
                 <div className="flex items-center gap-x-[20px] mt-8">
                   <motion.button onClick={handleDownload} transition={{ duration: 0.125, ease: "easeInOut" }} whileHover={{scale: 1.05, translateY: -5}} whileTap={{scale: 0.95, rotate: "2.5deg"}} className="bg-[#fff] transition duration-300 ease-in-out scale-[1] hover:bg-[rgba(255,255,255,.75)] rounded-[5px] gap-x-[20px] shadow-[0px_0px_10px_0px_rgba(255,255,255,.75)] flex items-center px-[20px] py-[10px] text-black">
                       <p className="font-bold">Resume</p>
