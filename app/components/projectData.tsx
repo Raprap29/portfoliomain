@@ -504,7 +504,7 @@ export const ArrayForTheProject: ProjectProps[] = [
           },
          
         ],
-        description: "This website is a project of the Unison when it needs of the company to locate what departments of the employees especially of the new employee, it needs ask and ask to the employee that can be distract.",
+        description: "This website is a Note using Laravel",
       },
   ];
   
