@@ -2,7 +2,9 @@
 
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import {motion, Variants} from "framer-motion";
+import { Luckiest_Guy } from "next/font/google";
 
+// Front end
 import { BiLogoJavascript } from "react-icons/bi";
 import { SiTailwindcss } from "react-icons/si";
 import { FaHtml5 } from "react-icons/fa";
@@ -11,21 +13,27 @@ import { SiRedux } from "react-icons/si";
 import { FaCss3Alt } from "react-icons/fa";
 import { FaBootstrap } from "react-icons/fa6";
 import { SiNextdotjs } from "react-icons/si";
-import { Luckiest_Guy } from "next/font/google";
+
+// Backend
+import { DiCodeigniter } from "react-icons/di";
+import { FaLaravel } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
 import { BiLogoSpringBoot } from "react-icons/bi";
 import { SiTypescript } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import { FaPhp } from "react-icons/fa";
 
+// Databases
 import { SiMysql } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
 import { SiMongodb } from "react-icons/si";
 
+// Mobile Development
 import { TbBrandKotlin } from "react-icons/tb";
 import { SiAndroidstudio } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 
+// Others
 import { SiPostman } from "react-icons/si";
 import { SiVisualstudio } from "react-icons/si";
 import { FaDocker } from "react-icons/fa";
@@ -33,6 +41,7 @@ import { IoLogoFigma } from "react-icons/io5";
 import { IoLogoGithub } from "react-icons/io";
 import { FaGitAlt } from "react-icons/fa";
 import { GrGraphQl } from "react-icons/gr";
+
 
 const Luckiest_GuyFont = Luckiest_Guy({subsets: ['latin'], weight: "400"})
 
@@ -100,9 +109,10 @@ const Tools: React.FC = () => {
         BiLogoSpringBoot,
         SiTypescript,
         FaJava,
-        FaPhp
+        FaPhp,
+        DiCodeigniter,
+        FaLaravel
     ];
-
     
     const dataBaseIcons = [
         SiMysql,
