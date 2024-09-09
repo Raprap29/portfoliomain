@@ -133,7 +133,7 @@ const Home: React.FC = () => {
                     <Typewriter
                       options={{
                         strings: [
-                          "I am a Web Developer",
+                          "I am a Full Stack Developer",
                           "I am an Android Developer",
                         ],
                         autoStart: true,
