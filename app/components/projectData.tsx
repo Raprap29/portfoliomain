@@ -17,6 +17,51 @@ interface ProjectProps {
 
 export const ArrayForTheProject: ProjectProps[] = [
     {
+      image: "15.png",
+      name: "Wisehunt System",
+      type: [
+        {
+          name: "Laravel",
+          color: "#F05340",
+          textcolor: "#fff",
+        },
+        {
+          name: "Vite",
+          color: "#3d1663",
+          textcolor: "#fff"
+        },
+        {
+          name: "Tailwind",
+          color: "#fff",
+          textcolor: "#000"
+        },
+        {
+          name: "MySql",
+          color: "#00758f",
+          textcolor: "#fff"
+        },
+      ],
+      imgShow: 
+      [
+        {
+          img: "MillennialsGadget/1"
+        },
+        {
+          img: "MillennialsGadget/2"
+        },
+        {
+          img: "MillennialsGadget/3"
+        },
+        {
+          img: "MillennialsGadget/4"
+        },
+        {
+          img: "MillennialsGadget/5"
+        },
+      ],
+      description: "This website belongs to a company that offers a range of products across all devices, featuring a secure payment gateway and Google authentication for easy login.",
+    },
+    {
       image: "2.png",
       name: "Wisehunt System",
       type: [

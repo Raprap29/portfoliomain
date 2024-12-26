@@ -89,12 +89,6 @@ const Navbar = () => {
                                         <Link scroll={true} href="#about" className="border-black text-black transition-all duration-300 ease-in-out inline-flex items-center px-1 pt-1 text-sm font-medium hover:border-b-2 transition-opacity duration-300 ease-in-out hover:opacity-50">
                                             <p className="font-bold">About Me</p>
                                         </Link>
-                                        {/* <Link scroll={true} href="#services" className="border-black text-black transition-all duration-300 ease-in-out inline-flex items-center px-1 pt-1 text-sm font-medium hover:border-b-2 transition-opacity duration-300 ease-in-out hover:opacity-50">
-                                            <p className="font-bold">Services</p>
-                                        </Link>
-                                        <Link scroll={true} href="#edu" className="border-black text-black transition-all duration-300 ease-in-out inline-flex items-center px-1 pt-1 text-sm font-medium hover:border-b-2 transition-opacity duration-300 ease-in-out hover:opacity-50">
-                                            <p className="font-bold">Educational Background</p>
-                                        </Link> */}
                                         <Link scroll={true} href="#tools" className="border-black text-black transition-all duration-300 ease-in-out inline-flex items-center px-1 pt-1 text-sm font-medium hover:border-b-2 transition-opacity duration-300 ease-in-out hover:opacity-50">
                                         <p className="font-bold">My Tools</p>
                                         </Link>
@@ -137,16 +131,10 @@ const Navbar = () => {
                         duration: 2
                     }}
 
-                    className="max-[768px]:block hidden fixed top-[95px] bg-[#000] h-[400px] border border-solid border-[#fff] w-[230px] border-[5px] right-[25px] z-[99]">
+                    className="max-[768px]:block hidden fixed top-[95px] bg-[#000] h-[260px] border border-solid border-[#fff] w-[230px] border-[5px] right-[25px] z-[99]">
                         <div className="p-4 flex flex-col gap-y-[15px]">
                             <a href="#about" className={``}>
                                 <p className="text-[24px]">About</p>
-                            </a>
-                            <a href="#services" className={``}>
-                                <p className="text-[24px]">Services</p>
-                            </a>
-                            <a href="#edu" className={``}>
-                                <p className="text-[24px]">Educational Background</p>
                             </a>
                             <a href="#tools" className={``}>
                                 <p className="text-[24px]">My Tools</p>
@@ -157,7 +145,7 @@ const Navbar = () => {
                         </div>
                         <div className="bg-[#fff] w-full h-[3px]"></div>
                         <div className="flex items-center justify-center mt-4">
-                            <a href="#" className={`bg-[green] transition-all duration-300 ease-in-out rounded-[5px] h-[45px] gap-x-[10px] border border-solid border-[#000] text-black inline-flex items-center px-4 text-sm font-medium transition-opacity duration-300 ease-in-out hover:opacity-50`}>
+                            <a href="#contact" className={`bg-[green] transition-all duration-300 ease-in-out rounded-[5px] h-[45px] gap-x-[10px] border border-solid border-[#000] text-black inline-flex items-center px-4 text-sm font-medium transition-opacity duration-300 ease-in-out hover:opacity-50`}>
                                 <FaRegUserCircle color={`#fff`} size={25} />
                                 <p className={`text-[#fff] font-bold`}>Contact Me</p>
                             </a>
