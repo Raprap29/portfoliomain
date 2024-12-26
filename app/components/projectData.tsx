@@ -18,7 +18,7 @@ interface ProjectProps {
 export const ArrayForTheProject: ProjectProps[] = [
     {
       image: "15.png",
-      name: "Wisehunt System",
+      name: "MIllennials Gadget",
       type: [
         {
           name: "Laravel",
